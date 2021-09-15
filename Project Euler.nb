@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     11445,        331]
-NotebookOptionsPosition[      8723,        268]
-NotebookOutlinePosition[      9136,        285]
-CellTagsIndexPosition[      9093,        282]
+NotebookDataLength[     14826,        427]
+NotebookOptionsPosition[     11047,        343]
+NotebookOutlinePosition[     11460,        360]
+CellTagsIndexPosition[     11417,        357]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -124,7 +124,7 @@ Cell[BoxData["233168"], "Output",
  CellLabel->"Out[11]=",ExpressionUUID->"2fedf574-5527-47e7-9b1f-720752cdf6e4"]
 }, Open  ]]
 }, Open  ]]
-}, Open  ]],
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -151,7 +151,7 @@ four million, find the sum of the even - valued terms .\
  CellChangeTimes->{{3.840678834292384*^9, 3.8406788442539454`*^9}, 
    3.84067887660928*^9},ExpressionUUID->"ddfac457-3a19-4fab-802c-\
 f6cc9f27cb81"]
-}, Open  ]],
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -202,7 +202,7 @@ Cell[BoxData[
     RowBox[{"False", ",", "40"}], "}"}]}], "}"}]], "Output",
  CellChangeTimes->{{3.8406812662126427`*^9, 3.8406812732900443`*^9}},
  CellLabel->"Out[33]=",ExpressionUUID->"da1aad4a-777e-41bb-aa7b-c6fe86a93b3c"]
-}, Open  ]],
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -231,8 +231,8 @@ Cell[BoxData["4613732"], "Output",
    3.840681020302413*^9, 3.8406810329146996`*^9}, {3.840681093983395*^9, 
    3.840681106707655*^9}, 3.8406811697949343`*^9, 3.8406812785603037`*^9},
  CellLabel->"Out[34]=",ExpressionUUID->"2ef4617b-e02d-4a29-a3b2-5b9a6f1c9544"]
-}, Open  ]]
-}, Open  ]],
+}, Closed]]
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -261,13 +261,88 @@ Cell[BoxData["4613732"], "Output",
  CellChangeTimes->{{3.8406811449583464`*^9, 3.8406811555712423`*^9}, {
    3.840681188521006*^9, 3.84068121412729*^9}, 3.840681286477249*^9},
  CellLabel->"Out[35]=",ExpressionUUID->"1a2c0efd-d237-4d86-912e-f834d40b1c2b"]
-}, Open  ]]
-}, Open  ]]
-}, Open  ]]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 3 : Largest prime factor", "Section",
+ CellChangeTimes->{{3.8405912584234304`*^9, 3.8405912937152634`*^9}, {
+  3.84059231474197*^9, 3.840592320388095*^9}, {3.840678822471157*^9, 
+  3.8406788266486473`*^9}, {3.840712202952458*^9, 
+  3.840712213549074*^9}},ExpressionUUID->"a6c6e107-be0d-4b93-a95b-\
+d5826bbf8060"],
+
+Cell[CellGroupData[{
+
+Cell["Question :", "Subsection",
+ CellChangeTimes->{{3.840678862001932*^9, 
+  3.8406788704069357`*^9}},ExpressionUUID->"33a4e910-1bc2-4a81-b8fb-\
+6e1ee5b1d747"],
+
+Cell["\<\
+The prime factors of 13195 are 5, 7, 13 and 29.
+
+What is the largest prime factor of the number 600851475143?\
+\>", "Text",
+ CellChangeTimes->{{3.840712228705587*^9, 
+  3.8407122357878494`*^9}},ExpressionUUID->"7b19231c-bf9c-4ff7-ad7c-\
+a715f6098ad5"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["My Answer:", "Subsection",
+ CellChangeTimes->{{3.840678862001932*^9, 
+  3.840678889233534*^9}},ExpressionUUID->"1d05abc7-8e3e-4ad3-a771-\
+233e81ba4d83"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"First", "[", 
+  RowBox[{"Last", "[", 
+   RowBox[{"FactorInteger", "[", "600851475143", "]"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.840712241189995*^9, 3.8407122760954523`*^9}, {
+  3.8407123091846533`*^9, 3.840712332303008*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"be19d947-6aa3-47da-8a51-17e98e63da29"],
+
+Cell[BoxData["6857"], "Output",
+ CellChangeTimes->{
+  3.8407122764747496`*^9, {3.840712312689184*^9, 3.8407123325800166`*^9}},
+ CellLabel->"Out[4]=",ExpressionUUID->"23a87fa6-342d-4eb6-9d8d-f0ffa00da0f0"]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Answer given by Stone Zeng:", "Subsection",
+ CellChangeTimes->{{3.840592188633397*^9, 
+  3.8405921976207857`*^9}},ExpressionUUID->"4f550ac3-cc74-4d47-b814-\
+b2ba3f1ddb7f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"FactorInteger", "[", "600851475143", "]"}], "[", 
+  RowBox[{"[", 
+   RowBox[{
+    RowBox[{"-", "1"}], ",", "1"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.840712474660688*^9, 3.840712474661688*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"978f148f-9dbf-4a30-a9a3-a59f06883520"],
+
+Cell[BoxData["6857"], "Output",
+ CellChangeTimes->{3.8407124780800676`*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"a129db34-d87f-4c9c-b4f4-da54674ac7d3"]
+}, Closed]]
+}, Closed]]
+}, Closed]]
 }, Open  ]]
 },
-WindowSize->{760, 515},
-WindowMargins->{{480, Automatic}, {-25, Automatic}},
+WindowSize->{760, 516},
+WindowMargins->{{Automatic, 569}, {172, Automatic}},
 FrontEndVersion->"12.2 for Microsoft Windows (64-bit) (2021\:5e742\:67085\
 \:65e5)",
 StyleDefinitions->"Default.nb",
@@ -306,32 +381,53 @@ Cell[3218, 106, 497, 13, 45, "Input",ExpressionUUID->"8617cb0a-a587-4969-ad5d-0b
 Cell[3718, 121, 156, 2, 32, "Output",ExpressionUUID->"2fedf574-5527-47e7-9b1f-720752cdf6e4"]
 }, Open  ]]
 }, Open  ]]
-}, Open  ]],
+}, Closed]],
 Cell[CellGroupData[{
-Cell[3935, 130, 279, 4, 67, "Section",ExpressionUUID->"5d035abc-1a2f-4d17-a839-21db23503499"],
+Cell[3935, 130, 279, 4, 53, "Section",ExpressionUUID->"5d035abc-1a2f-4d17-a839-21db23503499"],
 Cell[CellGroupData[{
 Cell[4239, 138, 160, 3, 53, "Subsection",ExpressionUUID->"62c9379a-57d0-424d-a5f3-2efb29cddcf6"],
 Cell[4402, 143, 495, 9, 100, "Text",ExpressionUUID->"ddfac457-3a19-4fab-802c-f6cc9f27cb81"]
-}, Open  ]],
+}, Closed]],
 Cell[CellGroupData[{
-Cell[4934, 157, 158, 3, 53, "Subsection",ExpressionUUID->"0b4aaa6b-9dc6-48d6-8d85-ba48ab26650b"],
+Cell[4934, 157, 158, 3, 37, "Subsection",ExpressionUUID->"0b4aaa6b-9dc6-48d6-8d85-ba48ab26650b"],
 Cell[CellGroupData[{
 Cell[5117, 164, 415, 11, 45, "Input",ExpressionUUID->"d51a3a43-4143-4632-9a5a-af16af1bab4d"],
 Cell[5535, 177, 902, 26, 52, "Output",ExpressionUUID->"da1aad4a-777e-41bb-aa7b-c6fe86a93b3c"]
-}, Open  ]],
+}, Closed]],
 Cell[CellGroupData[{
 Cell[6474, 208, 783, 16, 45, "Input",ExpressionUUID->"172429db-7dd9-4353-be7c-c46bab4a2d84"],
 Cell[7260, 226, 434, 6, 32, "Output",ExpressionUUID->"2ef4617b-e02d-4a29-a3b2-5b9a6f1c9544"]
-}, Open  ]]
-}, Open  ]],
+}, Closed]]
+}, Closed]],
 Cell[CellGroupData[{
-Cell[7743, 238, 177, 3, 53, "Subsection",ExpressionUUID->"86b0685f-334d-4103-98b7-eace7166805d"],
+Cell[7743, 238, 177, 3, 37, "Subsection",ExpressionUUID->"86b0685f-334d-4103-98b7-eace7166805d"],
 Cell[CellGroupData[{
 Cell[7945, 245, 469, 12, 45, "Input",ExpressionUUID->"96ef6bef-9de5-402e-a063-c4c455a818d2"],
 Cell[8417, 259, 254, 3, 32, "Output",ExpressionUUID->"1a2c0efd-d237-4d86-912e-f834d40b1c2b"]
-}, Open  ]]
-}, Open  ]]
-}, Open  ]]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[8732, 269, 326, 5, 53, "Section",ExpressionUUID->"a6c6e107-be0d-4b93-a95b-d5826bbf8060"],
+Cell[CellGroupData[{
+Cell[9083, 278, 160, 3, 53, "Subsection",ExpressionUUID->"33a4e910-1bc2-4a81-b8fb-6e1ee5b1d747"],
+Cell[9246, 283, 261, 7, 78, "Text",ExpressionUUID->"7b19231c-bf9c-4ff7-ad7c-a715f6098ad5"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[9544, 295, 158, 3, 37, "Subsection",ExpressionUUID->"1d05abc7-8e3e-4ad3-a771-233e81ba4d83"],
+Cell[CellGroupData[{
+Cell[9727, 302, 338, 6, 45, "Input",ExpressionUUID->"be19d947-6aa3-47da-8a51-17e98e63da29"],
+Cell[10068, 310, 204, 3, 32, "Output",ExpressionUUID->"23a87fa6-342d-4eb6-9d8d-f0ffa00da0f0"]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[10321, 319, 177, 3, 53, "Subsection",ExpressionUUID->"4f550ac3-cc74-4d47-b814-b2ba3f1ddb7f"],
+Cell[CellGroupData[{
+Cell[10523, 326, 316, 7, 45, "Input",ExpressionUUID->"978f148f-9dbf-4a30-a9a3-a59f06883520"],
+Cell[10842, 335, 153, 2, 32, "Output",ExpressionUUID->"a129db34-d87f-4c9c-b4f4-da54674ac7d3"]
+}, Closed]]
+}, Closed]]
+}, Closed]]
 }, Open  ]]
 }
 ]
