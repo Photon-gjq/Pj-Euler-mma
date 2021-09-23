@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     87445,       2129]
-NotebookOptionsPosition[     72726,       1832]
-NotebookOutlinePosition[     73169,       1850]
-CellTagsIndexPosition[     73126,       1847]
+NotebookDataLength[     91940,       2239]
+NotebookOptionsPosition[     76148,       1921]
+NotebookOutlinePosition[     76590,       1939]
+CellTagsIndexPosition[     76547,       1936]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1827,11 +1827,100 @@ Cell[BoxData["1366"], "Output",
  CellLabel->"Out[20]=",ExpressionUUID->"66b3ef94-0898-4f6f-96bd-c466d3491954"]
 }, Open  ]]
 }, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 20 : Factorial digit sum", "Section",
+ CellChangeTimes->{{3.8405912584234304`*^9, 3.8405912937152634`*^9}, {
+  3.84059231474197*^9, 3.840592320388095*^9}, {3.840678822471157*^9, 
+  3.8406788266486473`*^9}, {3.840712202952458*^9, 3.840712213549074*^9}, {
+  3.840771247421756*^9, 3.840771252392725*^9}, {3.840858972486598*^9, 
+  3.8408589783943796`*^9}, {3.8408592982523594`*^9, 3.840859303565398*^9}, {
+  3.840929127250039*^9, 3.840929134487214*^9}, {3.8409292696082335`*^9, 
+  3.840929284882834*^9}, {3.840930200301312*^9, 3.840930205623785*^9}, {
+  3.8410115028352823`*^9, 3.8410115105184546`*^9}, {3.8410567937495747`*^9, 
+  3.8410567979596415`*^9}, {3.841092633117199*^9, 3.8410926370241604`*^9}, {
+  3.8413083979155393`*^9, 3.841308401821965*^9}, {3.841399286880081*^9, 
+  3.8413992911953187`*^9}},ExpressionUUID->"bb19bb3b-cc9a-4f7f-8753-\
+bb29a87be06e"],
+
+Cell[CellGroupData[{
+
+Cell["Question :", "Subsection",
+ CellChangeTimes->{{3.840678862001932*^9, 
+  3.8406788704069357`*^9}},ExpressionUUID->"b907aaf0-7cf8-4ecf-b308-\
+8a520ad37f60"],
+
+Cell["\<\
+n! means n \[Times] (n \[Minus] 1) \[Times] ... \[Times] 3 \[Times] 2 \
+\[Times] 1
+For example, 10! = 10 \[Times] 9 \[Times] ... \[Times] 3 \[Times] 2 \[Times] \
+1 = 3628800,
+and the sum of the digits in the number 10! is 3 + 6 + 2 + 8 + 8 + 0 + 0 = 27.
+Find the sum of the digits in the number 100!\
+\>", "Text",
+ CellChangeTimes->{{3.84085932568147*^9, 3.8408593419532127`*^9}, {
+  3.840929142652602*^9, 3.840929209904676*^9}, {3.8409292907636805`*^9, 
+  3.840929300234646*^9}, {3.840930214407104*^9, 3.840930264238857*^9}, {
+  3.8410115167786684`*^9, 3.8410115207561054`*^9}, {3.841056803809103*^9, 
+  3.841056814550889*^9}, {3.841092644375079*^9, 3.8410926574225626`*^9}, {
+  3.8413084129967065`*^9, 3.841308440390237*^9}, {3.8413992968188963`*^9, 
+  3.8413993057528353`*^9}},ExpressionUUID->"07fb431c-3890-435a-ae01-\
+482cadd5ba0d"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["My Answer:", "Subsection",
+ CellChangeTimes->{{3.840678862001932*^9, 
+  3.840678889233534*^9}},ExpressionUUID->"5ec43a5b-6c40-463d-ac21-\
+90b3be3117a3"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Total", "@", 
+  RowBox[{"IntegerDigits", "[", 
+   RowBox[{"100", "!"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.8413084539022717`*^9, 3.841308478742859*^9}, {
+  3.841399307981832*^9, 3.8413993622543645`*^9}},
+ CellLabel->"In[28]:=",ExpressionUUID->"36b44ce5-4a61-4410-b7a6-56380f4af53b"],
+
+Cell[BoxData["648"], "Output",
+ CellChangeTimes->{
+  3.841308479175473*^9, {3.841399315250765*^9, 3.8413993625991125`*^9}},
+ CellLabel->"Out[28]=",ExpressionUUID->"db66d0e9-7bfd-4434-a884-646c6817f752"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Answer given by Stone Zeng:", "Subsection",
+ CellChangeTimes->{{3.840592188633397*^9, 
+  3.8405921976207857`*^9}},ExpressionUUID->"f8f4e1e6-a38a-44c3-aafd-\
+e0f0479b0e70"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Total", "@", 
+  RowBox[{"IntegerDigits", "[", 
+   RowBox[{"100", "!"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.8413085153357935`*^9, 3.841308515336795*^9}, 
+   3.841399533716687*^9},
+ CellLabel->"In[29]:=",ExpressionUUID->"e93cce28-7914-4813-89d1-bb6df046b753"],
+
+Cell[BoxData["648"], "Output",
+ CellChangeTimes->{3.8413085162622423`*^9, 3.841399537166647*^9},
+ CellLabel->"Out[29]=",ExpressionUUID->"7d4e20d3-657c-479e-a8dd-6e4a0a5961b7"]
+}, Open  ]]
+}, Closed]]
 }, Closed]]
 }, Open  ]]
 },
-WindowSize->{760, 465},
-WindowMargins->{{Automatic, 451}, {145, Automatic}},
+WindowSize->{760, 466},
+WindowMargins->{{397, Automatic}, {10, Automatic}},
 Magnification:>1.1 Inherited,
 FrontEndVersion->"12.2 for Microsoft Windows (64-bit) (2021\:5e742\:67085\
 \:65e5)",
@@ -2127,6 +2216,27 @@ Cell[72048, 1810, 177, 3, 41, "Subsection",ExpressionUUID->"7eabcd8d-cd85-4b21-b
 Cell[CellGroupData[{
 Cell[72250, 1817, 267, 5, 51, "Input",ExpressionUUID->"818d6f9e-655b-4b5a-abd2-1bef6e5dda88"],
 Cell[72520, 1824, 154, 2, 57, "Output",ExpressionUUID->"66b3ef94-0898-4f6f-96bd-c466d3491954"]
+}, Open  ]]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[72735, 1833, 873, 12, 57, "Section",ExpressionUUID->"bb19bb3b-cc9a-4f7f-8753-bb29a87be06e"],
+Cell[CellGroupData[{
+Cell[73633, 1849, 160, 3, 59, "Subsection",ExpressionUUID->"b907aaf0-7cf8-4ecf-b308-8a520ad37f60"],
+Cell[73796, 1854, 847, 15, 115, "Text",ExpressionUUID->"07fb431c-3890-435a-ae01-482cadd5ba0d"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[74680, 1874, 158, 3, 41, "Subsection",ExpressionUUID->"5ec43a5b-6c40-463d-ac21-90b3be3117a3"],
+Cell[CellGroupData[{
+Cell[74863, 1881, 312, 6, 51, "Input",ExpressionUUID->"36b44ce5-4a61-4410-b7a6-56380f4af53b"],
+Cell[75178, 1889, 202, 3, 36, "Output",ExpressionUUID->"db66d0e9-7bfd-4434-a884-646c6817f752"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[75429, 1898, 177, 3, 41, "Subsection",ExpressionUUID->"f8f4e1e6-a38a-44c3-aafd-e0f0479b0e70"],
+Cell[CellGroupData[{
+Cell[75631, 1905, 287, 6, 51, "Input",ExpressionUUID->"e93cce28-7914-4813-89d1-bb6df046b753"],
+Cell[75921, 1913, 175, 2, 57, "Output",ExpressionUUID->"7d4e20d3-657c-479e-a8dd-6e4a0a5961b7"]
 }, Open  ]]
 }, Closed]]
 }, Closed]]
