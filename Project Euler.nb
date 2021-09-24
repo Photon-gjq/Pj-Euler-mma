@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     91940,       2239]
-NotebookOptionsPosition[     76148,       1921]
-NotebookOutlinePosition[     76590,       1939]
-CellTagsIndexPosition[     76547,       1936]
+NotebookDataLength[    100198,       2465]
+NotebookOptionsPosition[     83328,       2126]
+NotebookOutlinePosition[     83770,       2144]
+CellTagsIndexPosition[     83727,       2141]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1916,11 +1916,216 @@ Cell[BoxData["648"], "Output",
  CellLabel->"Out[29]=",ExpressionUUID->"7d4e20d3-657c-479e-a8dd-6e4a0a5961b7"]
 }, Open  ]]
 }, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 30 : Digit fifth powers", "Section",
+ CellChangeTimes->{{3.8405912584234304`*^9, 3.8405912937152634`*^9}, {
+  3.84059231474197*^9, 3.840592320388095*^9}, {3.840678822471157*^9, 
+  3.8406788266486473`*^9}, {3.840712202952458*^9, 3.840712213549074*^9}, {
+  3.840771247421756*^9, 3.840771252392725*^9}, {3.840858972486598*^9, 
+  3.8408589783943796`*^9}, {3.8408592982523594`*^9, 3.840859303565398*^9}, {
+  3.840929127250039*^9, 3.840929134487214*^9}, {3.8409292696082335`*^9, 
+  3.840929284882834*^9}, {3.840930200301312*^9, 3.840930205623785*^9}, {
+  3.8410115028352823`*^9, 3.8410115105184546`*^9}, {3.8410567937495747`*^9, 
+  3.8410567979596415`*^9}, {3.841092633117199*^9, 3.8410926370241604`*^9}, {
+  3.8413083979155393`*^9, 3.841308401821965*^9}, {3.841399286880081*^9, 
+  3.8413992911953187`*^9}, {3.841489473029496*^9, 
+  3.84148947646172*^9}},ExpressionUUID->"a2e82e06-4e03-4e56-9ccf-\
+f24dc4fbe462"],
+
+Cell[CellGroupData[{
+
+Cell["Question :", "Subsection",
+ CellChangeTimes->{{3.840678862001932*^9, 
+  3.8406788704069357`*^9}},ExpressionUUID->"e8225271-ed12-4705-8ec3-\
+f05961ed5585"],
+
+Cell[TextData[{
+ "Surprisingly there are only three numbers that can be written as the sum of \
+fourth powers of their digits:\n    1634 = ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["1", "4"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "339dc6b4-9b8d-4442-b9fa-d9fb6e03b5c1"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["6", "4"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "77b0728e-de69-42f3-b5a9-ddf70134b9ef"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["3", "4"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "6dece8ea-38e1-4cd3-bd9e-e535561264a5"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["4", "4"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "ef83a5b3-0b6a-4157-9924-616544c81223"],
+ "\n    8208 = ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["8", "4"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "0e286ab8-d3eb-4b5b-8523-ceb8ec59b9b1"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["2", "4"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "21825936-8b41-4213-b88e-4185fc643625"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["0", "4"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "856184ee-10c0-417d-9fdc-5bb8b8761419"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["8", "4"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "6275ab45-5e3a-4da5-9229-c4809dc20d74"],
+ "\n    9474 = ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["9", "4"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "a2373199-cd7b-4b48-bbd2-13cacbb35379"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["4", "4"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "43c2a3e4-9aa7-4eab-bf63-a77d46c94f96"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["7", "4"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "576b22e8-45e6-45be-8006-85fc51a23226"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["4", "4"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "c2203516-5415-4ee9-b768-8f400bf9edb5"],
+ "\nAs 1 = ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["1", "4"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "af58878f-30cc-46fa-9fec-f331c401a79f"],
+ " is not a sum it is not included.\nThe sum of these numbers is 1634 + 8208 \
++ 9474 = 19316.\nFind the sum of all the numbers that can be written as the \
+sum of fifth powers of their digits."
+}], "Text",
+ CellChangeTimes->{{3.84085932568147*^9, 3.8408593419532127`*^9}, {
+  3.840929142652602*^9, 3.840929209904676*^9}, {3.8409292907636805`*^9, 
+  3.840929300234646*^9}, {3.840930214407104*^9, 3.840930264238857*^9}, {
+  3.8410115167786684`*^9, 3.8410115207561054`*^9}, {3.841056803809103*^9, 
+  3.841056814550889*^9}, {3.841092644375079*^9, 3.8410926574225626`*^9}, {
+  3.8413084129967065`*^9, 3.841308440390237*^9}, {3.8413992968188963`*^9, 
+  3.8413993057528353`*^9}, {3.8414887868435807`*^9, 
+  3.841488856833073*^9}},ExpressionUUID->"7144b008-3a22-4eba-b3d6-\
+1d53ec66dd55"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["My Answer:", "Subsection",
+ CellChangeTimes->{{3.840678862001932*^9, 
+  3.840678889233534*^9}},ExpressionUUID->"fea93b82-abdb-41bb-bcc3-\
+313e9dab6dc5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Total", "@", 
+  RowBox[{"Select", "[", 
+   RowBox[{
+    RowBox[{"Range", "[", 
+     RowBox[{"2", ",", "295245"}], "]"}], ",", 
+    RowBox[{
+     RowBox[{"#", "\[Equal]", " ", 
+      RowBox[{"Total", "[", 
+       RowBox[{
+        RowBox[{"IntegerDigits", "[", "#", "]"}], "^", "5"}], "]"}]}], 
+     "&"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"\:8fd9\:91cc\:7684\:4e0a\:754c295245", "=", 
+     RowBox[{"5", "*", 
+      RowBox[{"9", "^", "5"}]}]}], "\:ff0c", 
+    RowBox[{
+     RowBox[{"\:56e0\:4e3a9", "^", "5"}], "\:4e3a\:4e94\:4f4d\:6570"}]}], 
+   "*)"}]}]}], "Input",
+ CellChangeTimes->{{3.8414884845601006`*^9, 3.841488596237568*^9}, 
+   3.8414887194081664`*^9, {3.8414888620815563`*^9, 3.841488926931069*^9}, 
+   3.841488986920726*^9, {3.8414890965339384`*^9, 3.8414890988669643`*^9}, 
+   3.841489207858552*^9, {3.841489427626937*^9, 3.8414894819695625`*^9}, {
+   3.8414896356202884`*^9, 3.841489646733395*^9}},
+ CellLabel->"In[35]:=",ExpressionUUID->"f40531a0-2959-48ad-a6eb-8619e12ff45f"],
+
+Cell[BoxData["443839"], "Output",
+ CellChangeTimes->{{3.841488516168831*^9, 3.8414885983492165`*^9}, 
+   3.841488720272301*^9, 3.8414890996321206`*^9, {3.8414894295713177`*^9, 
+   3.8414894342711325`*^9}, 3.841489651781139*^9},
+ CellLabel->"Out[35]=",ExpressionUUID->"585790b6-8531-4dfc-a3c4-944be08a75d7"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Answer given by Stone Zeng:", "Subsection",
+ CellChangeTimes->{{3.840592188633397*^9, 
+  3.8405921976207857`*^9}},ExpressionUUID->"d70ab93d-7a34-49fd-802e-\
+21f02c6edb4c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Total", "@", 
+  RowBox[{
+   RowBox[{"Select", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"#", ",", 
+         RowBox[{"Total", "[", 
+          RowBox[{
+           RowBox[{"IntegerDigits", "[", "#", "]"}], "^", "5"}], "]"}]}], 
+        "}"}], "&"}], "/@", 
+      RowBox[{"Range", "[", "2*^5", "]"}]}], ",", 
+     RowBox[{"Apply", "[", 
+      RowBox[{
+       RowBox[{"#1", "\[Equal]", "#2"}], "&"}], "]"}]}], "]"}], "[", 
+   RowBox[{"[", 
+    RowBox[{
+     RowBox[{"2", ";;"}], ",", "1"}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.8414890793900876`*^9, 3.8414890921728578`*^9}, 
+   3.841489649478196*^9},
+ CellLabel->"In[36]:=",ExpressionUUID->"f394380d-a8ad-4ed5-a013-c68f64e97f7c"],
+
+Cell[BoxData["443839"], "Output",
+ CellChangeTimes->{{3.841489082500708*^9, 3.8414891031161995`*^9}, 
+   3.841489437427205*^9, 3.8414896538552856`*^9},
+ CellLabel->"Out[36]=",ExpressionUUID->"cdaaf097-ef07-43a5-9d77-67e5dcd20668"]
+}, Open  ]]
+}, Closed]]
 }, Closed]]
 }, Open  ]]
 },
-WindowSize->{760, 466},
-WindowMargins->{{397, Automatic}, {10, Automatic}},
+WindowSize->{760, 870},
+WindowMargins->{{138, Automatic}, {15, Automatic}},
 Magnification:>1.1 Inherited,
 FrontEndVersion->"12.2 for Microsoft Windows (64-bit) (2021\:5e742\:67085\
 \:65e5)",
@@ -2236,7 +2441,28 @@ Cell[CellGroupData[{
 Cell[75429, 1898, 177, 3, 41, "Subsection",ExpressionUUID->"f8f4e1e6-a38a-44c3-aafd-e0f0479b0e70"],
 Cell[CellGroupData[{
 Cell[75631, 1905, 287, 6, 51, "Input",ExpressionUUID->"e93cce28-7914-4813-89d1-bb6df046b753"],
-Cell[75921, 1913, 175, 2, 57, "Output",ExpressionUUID->"7d4e20d3-657c-479e-a8dd-6e4a0a5961b7"]
+Cell[75921, 1913, 175, 2, 36, "Output",ExpressionUUID->"7d4e20d3-657c-479e-a8dd-6e4a0a5961b7"]
+}, Open  ]]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[76157, 1922, 920, 13, 57, "Section",ExpressionUUID->"a2e82e06-4e03-4e56-9ccf-f24dc4fbe462"],
+Cell[CellGroupData[{
+Cell[77102, 1939, 160, 3, 59, "Subsection",ExpressionUUID->"e8225271-ed12-4705-8ec3-f05961ed5585"],
+Cell[77265, 1944, 3177, 92, 242, "Text",ExpressionUUID->"7144b008-3a22-4eba-b3d6-1d53ec66dd55"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[80479, 2041, 158, 3, 41, "Subsection",ExpressionUUID->"fea93b82-abdb-41bb-bcc3-313e9dab6dc5"],
+Cell[CellGroupData[{
+Cell[80662, 2048, 1068, 26, 74, "Input",ExpressionUUID->"f40531a0-2959-48ad-a6eb-8619e12ff45f"],
+Cell[81733, 2076, 306, 4, 36, "Output",ExpressionUUID->"585790b6-8531-4dfc-a3c4-944be08a75d7"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[82088, 2086, 177, 3, 41, "Subsection",ExpressionUUID->"d70ab93d-7a34-49fd-802e-21f02c6edb4c"],
+Cell[CellGroupData[{
+Cell[82290, 2093, 753, 22, 92, "Input",ExpressionUUID->"f394380d-a8ad-4ed5-a013-c68f64e97f7c"],
+Cell[83046, 2117, 230, 3, 36, "Output",ExpressionUUID->"cdaaf097-ef07-43a5-9d77-67e5dcd20668"]
 }, Open  ]]
 }, Closed]]
 }, Closed]]
