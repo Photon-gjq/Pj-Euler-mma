@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    100198,       2465]
-NotebookOptionsPosition[     83328,       2126]
-NotebookOutlinePosition[     83770,       2144]
-CellTagsIndexPosition[     83727,       2141]
+NotebookDataLength[    105857,       2611]
+NotebookOptionsPosition[     87908,       2251]
+NotebookOutlinePosition[     88351,       2269]
+CellTagsIndexPosition[     88308,       2266]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1920,6 +1920,131 @@ Cell[BoxData["648"], "Output",
 
 Cell[CellGroupData[{
 
+Cell["Problem 25 : 1000-digit Fibonacci number", "Section",
+ CellChangeTimes->{{3.8405912584234304`*^9, 3.8405912937152634`*^9}, {
+  3.84059231474197*^9, 3.840592320388095*^9}, {3.840678822471157*^9, 
+  3.8406788266486473`*^9}, {3.840712202952458*^9, 3.840712213549074*^9}, {
+  3.840771247421756*^9, 3.840771252392725*^9}, {3.840858972486598*^9, 
+  3.8408589783943796`*^9}, {3.8408592982523594`*^9, 3.840859303565398*^9}, {
+  3.840929127250039*^9, 3.840929134487214*^9}, {3.8409292696082335`*^9, 
+  3.840929284882834*^9}, {3.840930200301312*^9, 3.840930205623785*^9}, {
+  3.8410115028352823`*^9, 3.8410115105184546`*^9}, {3.8410567937495747`*^9, 
+  3.8410567979596415`*^9}, {3.841092633117199*^9, 3.8410926370241604`*^9}, {
+  3.8413083979155393`*^9, 3.841308401821965*^9}, {3.841399286880081*^9, 
+  3.8413992911953187`*^9}, {3.841659924215578*^9, 
+  3.8416599312229214`*^9}},ExpressionUUID->"3450de72-a8e2-4a0e-bdbf-\
+44a52880d5b8"],
+
+Cell[CellGroupData[{
+
+Cell["Question :", "Subsection",
+ CellChangeTimes->{{3.840678862001932*^9, 
+  3.8406788704069357`*^9}},ExpressionUUID->"b5538db2-1d61-4332-920a-\
+41d1cda945b5"],
+
+Cell["\<\
+The Fibonacci sequence is defined by the recurrence relation:
+   Fn = Fn\[Minus]1 + Fn\[Minus]2, where F1 = 1 and F2 = 1.
+Hence the first 12 terms will be:
+    F1 = 1
+    F2 = 1
+    F3 = 2
+    F4 = 3
+    F5 = 5
+    F6 = 8
+    F7 = 13
+    F8 = 21
+    F9 = 34
+    F10 = 55
+    F11 = 89
+    F12 = 144
+The 12th term, F12, is the first term to contain three digits.
+What is the index of the first term in the Fibonacci sequence to contain 1000 \
+digits?\
+\>", "Text",
+ CellChangeTimes->{{3.84085932568147*^9, 3.8408593419532127`*^9}, {
+  3.840929142652602*^9, 3.840929209904676*^9}, {3.8409292907636805`*^9, 
+  3.840929300234646*^9}, {3.840930214407104*^9, 3.840930264238857*^9}, {
+  3.8410115167786684`*^9, 3.8410115207561054`*^9}, {3.841056803809103*^9, 
+  3.841056814550889*^9}, {3.841092644375079*^9, 3.8410926574225626`*^9}, {
+  3.8413084129967065`*^9, 3.841308440390237*^9}, {3.8413992968188963`*^9, 
+  3.8413993057528353`*^9}, {3.8416599392359796`*^9, 
+  3.8416599550055437`*^9}},ExpressionUUID->"7079819a-f5bf-4297-8ac4-\
+fd90990dc969"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["My Answer:", "Subsection",
+ CellChangeTimes->{{3.840678862001932*^9, 
+  3.840678889233534*^9}},ExpressionUUID->"f715c050-d000-4c35-bf0c-\
+740838d4e2f6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FirstPosition", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"Length", "[", "#", "]"}], "&"}], "/@", 
+    RowBox[{"IntegerDigits", "@", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"Fibonacci", "[", "i", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "1", ",", "100000"}], "}"}]}], "]"}]}]}], ",", 
+   "1000"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8413084539022717`*^9, 3.841308478742859*^9}, {
+  3.841399307981832*^9, 3.8413993622543645`*^9}, {3.8416599633236046`*^9, 
+  3.841659977614263*^9}, {3.8416600300194016`*^9, 3.841660042777211*^9}, {
+  3.8416600806028967`*^9, 3.841660099291509*^9}, {3.841660485978101*^9, 
+  3.841660507853669*^9}, {3.841660875379753*^9, 3.841660929454945*^9}},
+ CellLabel->"In[59]:=",ExpressionUUID->"7ac57bf3-3c3a-4425-a887-4c469e9ca963"],
+
+Cell[BoxData[
+ RowBox[{"{", "4782", "}"}]], "Output",
+ CellChangeTimes->{
+  3.841308479175473*^9, {3.841399315250765*^9, 3.8413993625991125`*^9}, {
+   3.841660030827175*^9, 3.841660043129901*^9}, 3.8416600837337294`*^9, {
+   3.841660877147081*^9, 3.841660918278078*^9}, 3.8416609529499164`*^9},
+ CellLabel->"Out[59]=",ExpressionUUID->"4b26dd17-068a-4078-b9b0-8fd648337e9a"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Answer given by Stone Zeng:", "Subsection",
+ CellChangeTimes->{{3.840592188633397*^9, 
+  3.8405921976207857`*^9}},ExpressionUUID->"e741a983-6e0b-4578-8e85-\
+7239c683a529"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"NestWhile", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"#", "+", "1"}], "&"}], ",", "1", ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"IntegerLength", "[", 
+      RowBox[{"Fibonacci", "[", "#", "]"}], "]"}], "<", "1000"}], "&"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8413085153357935`*^9, 3.841308515336795*^9}, 
+   3.841399533716687*^9, 3.841660998715369*^9},
+ CellLabel->"In[60]:=",ExpressionUUID->"5edbf142-41e3-4ada-a129-bc95122617dc"],
+
+Cell[BoxData["4782"], "Output",
+ CellChangeTimes->{3.8413085162622423`*^9, 3.841399537166647*^9, 
+  3.841660999745245*^9},
+ CellLabel->"Out[60]=",ExpressionUUID->"feaa5510-ac52-4c64-84b4-1e3e93777746"]
+}, Open  ]]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
 Cell["Problem 30 : Digit fifth powers", "Section",
  CellChangeTimes->{{3.8405912584234304`*^9, 3.8405912937152634`*^9}, {
   3.84059231474197*^9, 3.840592320388095*^9}, {3.840678822471157*^9, 
@@ -2125,7 +2250,7 @@ Cell[BoxData["443839"], "Output",
 }, Open  ]]
 },
 WindowSize->{760, 870},
-WindowMargins->{{138, Automatic}, {15, Automatic}},
+WindowMargins->{{259, Automatic}, {-51, Automatic}},
 Magnification:>1.1 Inherited,
 FrontEndVersion->"12.2 for Microsoft Windows (64-bit) (2021\:5e742\:67085\
 \:65e5)",
@@ -2446,23 +2571,44 @@ Cell[75921, 1913, 175, 2, 36, "Output",ExpressionUUID->"7d4e20d3-657c-479e-a8dd-
 }, Closed]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[76157, 1922, 920, 13, 57, "Section",ExpressionUUID->"a2e82e06-4e03-4e56-9ccf-f24dc4fbe462"],
+Cell[76157, 1922, 932, 13, 57, "Section",ExpressionUUID->"3450de72-a8e2-4a0e-bdbf-44a52880d5b8"],
 Cell[CellGroupData[{
-Cell[77102, 1939, 160, 3, 59, "Subsection",ExpressionUUID->"e8225271-ed12-4705-8ec3-f05961ed5585"],
-Cell[77265, 1944, 3177, 92, 242, "Text",ExpressionUUID->"7144b008-3a22-4eba-b3d6-1d53ec66dd55"]
+Cell[77114, 1939, 160, 3, 59, "Subsection",ExpressionUUID->"b5538db2-1d61-4332-920a-41d1cda945b5"],
+Cell[77277, 1944, 1049, 28, 444, "Text",ExpressionUUID->"7079819a-f5bf-4297-8ac4-fd90990dc969"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[80479, 2041, 158, 3, 41, "Subsection",ExpressionUUID->"fea93b82-abdb-41bb-bcc3-313e9dab6dc5"],
+Cell[78363, 1977, 158, 3, 41, "Subsection",ExpressionUUID->"f715c050-d000-4c35-bf0c-740838d4e2f6"],
 Cell[CellGroupData[{
-Cell[80662, 2048, 1068, 26, 74, "Input",ExpressionUUID->"f40531a0-2959-48ad-a6eb-8619e12ff45f"],
-Cell[81733, 2076, 306, 4, 36, "Output",ExpressionUUID->"585790b6-8531-4dfc-a3c4-944be08a75d7"]
+Cell[78546, 1984, 832, 18, 115, "Input",ExpressionUUID->"7ac57bf3-3c3a-4425-a887-4c469e9ca963"],
+Cell[79381, 2004, 373, 6, 57, "Output",ExpressionUUID->"4b26dd17-068a-4078-b9b0-8fd648337e9a"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[82088, 2086, 177, 3, 41, "Subsection",ExpressionUUID->"d70ab93d-7a34-49fd-802e-21f02c6edb4c"],
+Cell[79803, 2016, 177, 3, 41, "Subsection",ExpressionUUID->"e741a983-6e0b-4578-8e85-7239c683a529"],
 Cell[CellGroupData[{
-Cell[82290, 2093, 753, 22, 92, "Input",ExpressionUUID->"f394380d-a8ad-4ed5-a013-c68f64e97f7c"],
-Cell[83046, 2117, 230, 3, 36, "Output",ExpressionUUID->"cdaaf097-ef07-43a5-9d77-67e5dcd20668"]
+Cell[80005, 2023, 467, 12, 51, "Input",ExpressionUUID->"5edbf142-41e3-4ada-a129-bc95122617dc"],
+Cell[80475, 2037, 201, 3, 36, "Output",ExpressionUUID->"feaa5510-ac52-4c64-84b4-1e3e93777746"]
+}, Open  ]]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[80737, 2047, 920, 13, 57, "Section",ExpressionUUID->"a2e82e06-4e03-4e56-9ccf-f24dc4fbe462"],
+Cell[CellGroupData[{
+Cell[81682, 2064, 160, 3, 59, "Subsection",ExpressionUUID->"e8225271-ed12-4705-8ec3-f05961ed5585"],
+Cell[81845, 2069, 3177, 92, 242, "Text",ExpressionUUID->"7144b008-3a22-4eba-b3d6-1d53ec66dd55"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[85059, 2166, 158, 3, 41, "Subsection",ExpressionUUID->"fea93b82-abdb-41bb-bcc3-313e9dab6dc5"],
+Cell[CellGroupData[{
+Cell[85242, 2173, 1068, 26, 74, "Input",ExpressionUUID->"f40531a0-2959-48ad-a6eb-8619e12ff45f"],
+Cell[86313, 2201, 306, 4, 36, "Output",ExpressionUUID->"585790b6-8531-4dfc-a3c4-944be08a75d7"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[86668, 2211, 177, 3, 41, "Subsection",ExpressionUUID->"d70ab93d-7a34-49fd-802e-21f02c6edb4c"],
+Cell[CellGroupData[{
+Cell[86870, 2218, 753, 22, 92, "Input",ExpressionUUID->"f394380d-a8ad-4ed5-a013-c68f64e97f7c"],
+Cell[87626, 2242, 230, 3, 36, "Output",ExpressionUUID->"cdaaf097-ef07-43a5-9d77-67e5dcd20668"]
 }, Open  ]]
 }, Closed]]
 }, Closed]]
