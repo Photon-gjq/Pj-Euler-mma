@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    112015,       2764]
-NotebookOptionsPosition[     92989,       2383]
-NotebookOutlinePosition[     93433,       2401]
-CellTagsIndexPosition[     93390,       2398]
+NotebookDataLength[    118196,       2915]
+NotebookOptionsPosition[     97997,       2511]
+NotebookOutlinePosition[     98534,       2531]
+CellTagsIndexPosition[     98491,       2528]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2378,11 +2378,141 @@ Cell[BoxData["40730"], "Output",
  CellLabel->"Out[89]=",ExpressionUUID->"73927340-c23a-41a9-af30-95659e49b79c"]
 }, Open  ]]
 }, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 35 : Circular primes", "Section",
+ CellChangeTimes->{{3.8405912584234304`*^9, 3.8405912937152634`*^9}, {
+  3.84059231474197*^9, 3.840592320388095*^9}, {3.840678822471157*^9, 
+  3.8406788266486473`*^9}, {3.840712202952458*^9, 3.840712213549074*^9}, {
+  3.840771247421756*^9, 3.840771252392725*^9}, {3.840858972486598*^9, 
+  3.8408589783943796`*^9}, {3.8408592982523594`*^9, 3.840859303565398*^9}, {
+  3.840929127250039*^9, 3.840929134487214*^9}, {3.8409292696082335`*^9, 
+  3.840929284882834*^9}, {3.840930200301312*^9, 3.840930205623785*^9}, {
+  3.8410115028352823`*^9, 3.8410115105184546`*^9}, {3.8410567937495747`*^9, 
+  3.8410567979596415`*^9}, {3.841092633117199*^9, 3.8410926370241604`*^9}, {
+  3.8413083979155393`*^9, 3.841308401821965*^9}, {3.841399286880081*^9, 
+  3.8413992911953187`*^9}, {3.841489473029496*^9, 3.84148947646172*^9}, {
+  3.841833850072057*^9, 3.841833858259025*^9}, {3.841988939107252*^9, 
+  3.841988944077901*^9}},ExpressionUUID->"1c8a7c2a-df2b-4761-991b-\
+9e71c89c7203"],
+
+Cell[CellGroupData[{
+
+Cell["Question :", "Subsection",
+ CellChangeTimes->{{3.840678862001932*^9, 
+  3.8406788704069357`*^9}},ExpressionUUID->"5bdcb0ff-da70-429b-9fcd-\
+e2edacee1e00"],
+
+Cell["\<\
+The number, 197, is called a circular prime because all rotations of the \
+digits: 197, 971, and 719, are themselves prime.
+There are thirteen such primes below 100: 2, 3, 5, 7, 11, 13, 17, 31, 37, 71, \
+73, 79, and 97.
+How many circular primes are there below one million?\
+\>", "Text",
+ CellChangeTimes->{{3.84085932568147*^9, 3.8408593419532127`*^9}, {
+  3.840929142652602*^9, 3.840929209904676*^9}, {3.8409292907636805`*^9, 
+  3.840929300234646*^9}, {3.840930214407104*^9, 3.840930264238857*^9}, {
+  3.8410115167786684`*^9, 3.8410115207561054`*^9}, {3.841056803809103*^9, 
+  3.841056814550889*^9}, {3.841092644375079*^9, 3.8410926574225626`*^9}, {
+  3.8413084129967065`*^9, 3.841308440390237*^9}, {3.8413992968188963`*^9, 
+  3.8413993057528353`*^9}, {3.8414887868435807`*^9, 3.841488856833073*^9}, {
+  3.841833866351384*^9, 3.841833871055382*^9}, {3.8419889501353583`*^9, 
+  3.841988955460249*^9}},ExpressionUUID->"16f066f6-18cb-49cc-af45-\
+7638c49de811"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["My Answer:", "Subsection",
+ CellChangeTimes->{{3.840678862001932*^9, 
+  3.840678889233534*^9}},ExpressionUUID->"26b940e6-8103-4914-90e2-\
+d142abc3c659"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "@", 
+  RowBox[{"Select", "[", 
+   RowBox[{
+    RowBox[{"Range", "[", "1000000", "]"}], ",", 
+    RowBox[{
+     RowBox[{"And", "@@", 
+      RowBox[{"PrimeQ", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"FromDigits", "[", "#1", "]"}], "&"}], "/@", 
+        RowBox[{"Permute", "[", 
+         RowBox[{
+          RowBox[{"IntegerDigits", "[", "#", "]"}], ",", 
+          RowBox[{"CyclicGroup", "[", 
+           RowBox[{"IntegerLength", "[", "#", "]"}], "]"}]}], "]"}]}], 
+       "]"}]}], "&"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.841988982312813*^9, 3.841988996587781*^9}, {
+   3.8419901765023403`*^9, 3.8419902089421587`*^9}, {3.841990258672037*^9, 
+   3.84199028669024*^9}, {3.8419903476390314`*^9, 3.8419903587536764`*^9}, {
+   3.841990402879207*^9, 3.8419904128029275`*^9}, 3.8419913525392156`*^9, 
+   3.8419916822767925`*^9, {3.8419917189969654`*^9, 3.8419917715640354`*^9}},
+ CellLabel->"In[65]:=",ExpressionUUID->"bb9f0ea5-58fe-44a2-9c41-7b181d38b8b0"],
+
+Cell[BoxData["55"], "Output",
+ CellChangeTimes->{
+  3.8419903596109376`*^9, {3.8419904091659527`*^9, 3.8419904139683547`*^9}, 
+   3.8419913533873234`*^9, {3.8419917487181845`*^9, 3.841991762204495*^9}, 
+   3.8419918569720306`*^9},
+ CellLabel->"Out[65]=",ExpressionUUID->"cee1934e-a6df-439d-905e-591bf02209f8"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Answer given by Stone Zeng:", "Subsection",
+ CellChangeTimes->{{3.840592188633397*^9, 
+  3.8405921976207857`*^9}},ExpressionUUID->"774d301f-afd4-41c5-8d11-\
+b295ce3085c3"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"circularPrimeQ", "[", "n_", "]"}], ":=", 
+  RowBox[{"And", "@@", 
+   RowBox[{"PrimeQ", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"FromDigits", "@", 
+       RowBox[{"RotateLeft", "[", 
+        RowBox[{
+         RowBox[{"IntegerDigits", "[", "n", "]"}], ",", "#"}], "]"}]}], "&"}],
+      "/@", 
+     RowBox[{"Range", "[", 
+      RowBox[{
+       RowBox[{"IntegerLength", "[", "n", "]"}], "-", "1"}], "]"}]}], 
+    "]"}]}]}], "\n", 
+ RowBox[{"Length", "@", 
+  RowBox[{"Select", "[", 
+   RowBox[{
+    RowBox[{"Prime", "@", 
+     RowBox[{"Range", "@", 
+      RowBox[{"PrimePi", "[", "1*^6", "]"}]}]}], ",", "circularPrimeQ"}], 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{{3.8419919676862345`*^9, 3.841991967687244*^9}},
+ CellLabel->"In[66]:=",ExpressionUUID->"8cd57840-4343-4f51-96fb-8ffd3bf76c61"],
+
+Cell[BoxData["55"], "Output",
+ CellChangeTimes->{3.8419919717136297`*^9},
+ CellLabel->"Out[67]=",ExpressionUUID->"5d0c7144-6fac-440e-afff-2f67638d62ee"]
+}, Open  ]]
+}, Closed]]
 }, Closed]]
 }, Open  ]]
 },
 WindowSize->{760, 900},
-WindowMargins->{{548, Automatic}, {-239, Automatic}},
+WindowMargins->{{207, Automatic}, {-79, Automatic}},
+TaggingRules->{
+ "WelcomeScreenSettings" -> {"FEStarting" -> False}, "TryRealOnly" -> False},
 Magnification:>1.1 Inherited,
 FrontEndVersion->"12.2 for Microsoft Windows (64-bit) (2021\:5e742\:67085\
 \:65e5)",
@@ -2762,6 +2892,27 @@ Cell[91357, 2332, 177, 3, 41, "Subsection",ExpressionUUID->"b0c6e4a5-d523-41fd-b
 Cell[CellGroupData[{
 Cell[91559, 2339, 1122, 33, 92, "Input",ExpressionUUID->"a22abd81-9a58-41a5-937d-5d068a6559f5"],
 Cell[92684, 2374, 253, 3, 57, "Output",ExpressionUUID->"73927340-c23a-41a9-af30-95659e49b79c"]
+}, Open  ]]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[92998, 2384, 1012, 14, 57, "Section",ExpressionUUID->"1c8a7c2a-df2b-4761-991b-9e71c89c7203"],
+Cell[CellGroupData[{
+Cell[94035, 2402, 160, 3, 59, "Subsection",ExpressionUUID->"5bdcb0ff-da70-429b-9fcd-e2edacee1e00"],
+Cell[94198, 2407, 969, 16, 115, "Text",ExpressionUUID->"16f066f6-18cb-49cc-af45-7638c49de811"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[95204, 2428, 158, 3, 41, "Subsection",ExpressionUUID->"26b940e6-8103-4914-90e2-d142abc3c659"],
+Cell[CellGroupData[{
+Cell[95387, 2435, 1008, 22, 174, "Input",ExpressionUUID->"bb9f0ea5-58fe-44a2-9c41-7b181d38b8b0"],
+Cell[96398, 2459, 309, 5, 36, "Output",ExpressionUUID->"cee1934e-a6df-439d-905e-591bf02209f8"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[96756, 2470, 177, 3, 41, "Subsection",ExpressionUUID->"774d301f-afd4-41c5-8d11-b295ce3085c3"],
+Cell[CellGroupData[{
+Cell[96958, 2477, 832, 24, 155, "Input",ExpressionUUID->"8cd57840-4343-4f51-96fb-8ffd3bf76c61"],
+Cell[97793, 2503, 152, 2, 57, "Output",ExpressionUUID->"5d0c7144-6fac-440e-afff-2f67638d62ee"]
 }, Open  ]]
 }, Closed]]
 }, Closed]]
