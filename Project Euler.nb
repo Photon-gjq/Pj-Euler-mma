@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    118196,       2915]
-NotebookOptionsPosition[     97997,       2511]
-NotebookOutlinePosition[     98534,       2531]
-CellTagsIndexPosition[     98491,       2528]
+NotebookDataLength[    123864,       3060]
+NotebookOptionsPosition[    102584,       2635]
+NotebookOutlinePosition[    103120,       2655]
+CellTagsIndexPosition[    103077,       2652]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -458,8 +458,8 @@ Cell[BoxData[{
 Cell[BoxData["906609"], "Output",
  CellChangeTimes->{3.840860767695793*^9},
  CellLabel->"Out[58]=",ExpressionUUID->"97e36a3c-6d19-4636-9885-8dbb43a0ddc2"]
-}, Closed]]
-}, Open  ]],
+}, Open  ]]
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -2506,11 +2506,135 @@ Cell[BoxData["55"], "Output",
  CellLabel->"Out[67]=",ExpressionUUID->"5d0c7144-6fac-440e-afff-2f67638d62ee"]
 }, Open  ]]
 }, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 36 : Double-base palindromes", "Section",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQBmIQva/Hd3PE3DeOBY+3bQfRFvvCzSOBtFs2jwWI3iF8
+vqQZRB8MKQXRnVVxBycDaZZJGw+BaLb6t1M3AGmTiT3TQLTZpP7s20D60Dyf
+HBAdIuwxBUTvE/8EpoMYXqz5C6Sdpp9fC6KXlW3eB6J1HeYcANGRSziN/wFp
+nm+bwfSiXbeeqs5746g3/cIzEN3yx5zZBkgnbd0HpiUOKDf7Auk3RxeAaUmf
+vXe3AekuX6t7IHqB5h27x0Ca1yHNHkQv+qjgwT//jWPmsT4w7eXnlL8dSL/3
+9CgA0XPykjWZF7xx1Kpj0gLRLUe8jpstfOPolypzAkQDAPvfo5k=
+  "],ExpressionUUID->"d950b03e-df16-4fc2-b942-525f38426415"],
+
+Cell[CellGroupData[{
+
+Cell["Question :", "Subsection",
+ CellChangeTimes->{{3.840678862001932*^9, 
+  3.8406788704069357`*^9}},ExpressionUUID->"74e25765-5167-42ea-b370-\
+c1908578429c"],
+
+Cell["\<\
+The decimal number, 585 = 10010010012 (binary), is palindromic in both bases.
+Find the sum of all numbers, less than one million, which are palindromic in \
+base 10 and base 2.
+(Please note that the palindromic number, in either base, may not include \
+leading zeros.)\
+\>", "Text",
+ CellChangeTimes->{{3.84085932568147*^9, 3.8408593419532127`*^9}, {
+  3.840929142652602*^9, 3.840929209904676*^9}, {3.8409292907636805`*^9, 
+  3.840929300234646*^9}, {3.840930214407104*^9, 3.840930264238857*^9}, {
+  3.8410115167786684`*^9, 3.8410115207561054`*^9}, {3.841056803809103*^9, 
+  3.841056814550889*^9}, {3.841092644375079*^9, 3.8410926574225626`*^9}, {
+  3.8413084129967065`*^9, 3.841308440390237*^9}, {3.8413992968188963`*^9, 
+  3.8413993057528353`*^9}, {3.8414887868435807`*^9, 3.841488856833073*^9}, {
+  3.841833866351384*^9, 3.841833871055382*^9}, {3.8419889501353583`*^9, 
+  3.841988955460249*^9}, {3.842618984205803*^9, 
+  3.842618988468608*^9}},ExpressionUUID->"f7f8a4b9-53fa-4ed8-8189-\
+a207cf70751c"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["My Answer:", "Subsection",
+ CellChangeTimes->{{3.840678862001932*^9, 
+  3.840678889233534*^9}},ExpressionUUID->"cce8f481-194a-4d2a-8214-\
+b217a3083ac6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Pa", "=", 
+   RowBox[{"Select", "[", 
+    RowBox[{
+     RowBox[{"Range", "[", "1000000", "]"}], ",", "PalindromeQ"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Total", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"FromDigits", "[", 
+     RowBox[{
+      RowBox[{"IntegerDigits", "[", "#1", "]"}], ",", "2"}], "]"}], "&"}], "/@", 
+   RowBox[{"Select", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"FromDigits", "[", 
+        RowBox[{"IntegerDigits", "[", 
+         RowBox[{"#", ",", "2"}], "]"}], "]"}], "&"}], "/@", "Pa"}], ",", 
+     "PalindromeQ"}], "]"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.841988982312813*^9, 3.841988996587781*^9}, {
+   3.8419901765023403`*^9, 3.8419902089421587`*^9}, {3.841990258672037*^9, 
+   3.84199028669024*^9}, {3.8419903476390314`*^9, 3.8419903587536764`*^9}, {
+   3.841990402879207*^9, 3.8419904128029275`*^9}, 3.8419913525392156`*^9, 
+   3.8419916822767925`*^9, {3.8419917189969654`*^9, 3.8419917715640354`*^9}, 
+   3.842618995401064*^9, {3.842619135828303*^9, 3.8426191707761507`*^9}, 
+   3.8426196642595835`*^9, {3.842620168853608*^9, 3.8426201690106964`*^9}, {
+   3.842620312666146*^9, 3.842620326620437*^9}, {3.8426203656126957`*^9, 
+   3.8426203672095747`*^9}},
+ CellLabel->
+  "In[134]:=",ExpressionUUID->"1a0c5dc9-40b2-4748-8e80-d53f8b60fe53"],
+
+Cell[BoxData["872187"], "Output",
+ CellChangeTimes->{
+  3.842620172206703*^9, {3.842620318953786*^9, 3.8426203300538883`*^9}, 
+   3.842620373992035*^9},
+ CellLabel->
+  "Out[135]=",ExpressionUUID->"67913f0d-5a07-4a34-9858-0c7900941036"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Answer given by Stone Zeng:", "Subsection",
+ CellChangeTimes->{{3.840592188633397*^9, 
+  3.8405921976207857`*^9}},ExpressionUUID->"9552080a-73ff-4ceb-99ec-\
+f11d5464f86f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Total", "@", 
+  RowBox[{"Select", "[", 
+   RowBox[{
+    RowBox[{"Range", "[", "1*^6", "]"}], ",", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"PalindromeQ", "[", "#", "]"}], "&&", 
+      RowBox[{"PalindromeQ", "@", 
+       RowBox[{"IntegerString", "[", 
+        RowBox[{"#", ",", "2"}], "]"}]}]}], "&"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.8426202897785892`*^9, 3.842620289779589*^9}, {
+  3.842620337274868*^9, 3.84262036357477*^9}},
+ CellLabel->
+  "In[136]:=",ExpressionUUID->"d176362e-b503-44ed-9360-7d5e4e0678eb"],
+
+Cell[BoxData["872187"], "Output",
+ CellChangeTimes->{3.8426203071025534`*^9, 3.84262034256299*^9, 
+  3.8426203774454403`*^9},
+ CellLabel->
+  "Out[136]=",ExpressionUUID->"c5558367-7bb0-4046-94a7-5b4ae51114ab"]
+}, Open  ]]
+}, Closed]]
 }, Closed]]
 }, Open  ]]
 },
 WindowSize->{760, 900},
-WindowMargins->{{207, Automatic}, {-79, Automatic}},
+WindowMargins->{{539, Automatic}, {11, Automatic}},
 TaggingRules->{
  "WelcomeScreenSettings" -> {"FEStarting" -> False}, "TryRealOnly" -> False},
 Magnification:>1.1 Inherited,
@@ -2609,11 +2733,11 @@ Cell[CellGroupData[{
 Cell[12178, 373, 158, 3, 41, "Subsection",ExpressionUUID->"dae04ea4-aea8-4afe-96b8-c800577926d9"],
 Cell[CellGroupData[{
 Cell[12361, 380, 2742, 75, 307, "Input",ExpressionUUID->"e248df3d-8402-4ad3-af7c-52a8a7464dd8"],
-Cell[15106, 457, 154, 2, 57, "Output",ExpressionUUID->"97e36a3c-6d19-4636-9885-8dbb43a0ddc2"]
-}, Closed]]
-}, Open  ]],
+Cell[15106, 457, 154, 2, 36, "Output",ExpressionUUID->"97e36a3c-6d19-4636-9885-8dbb43a0ddc2"]
+}, Open  ]]
+}, Closed]],
 Cell[CellGroupData[{
-Cell[15309, 465, 177, 3, 59, "Subsection",ExpressionUUID->"2d059236-ca30-462d-afd4-6e693e56e741"],
+Cell[15309, 465, 177, 3, 41, "Subsection",ExpressionUUID->"2d059236-ca30-462d-afd4-6e693e56e741"],
 Cell[CellGroupData[{
 Cell[15511, 472, 553, 14, 87, "Input",ExpressionUUID->"508fabe1-e825-4604-8ad2-7d3fb35a84d9"],
 Cell[16067, 488, 255, 5, 36, "Output",ExpressionUUID->"5946f7fb-19a1-437a-b34f-39ef6115a592"]
@@ -2913,6 +3037,27 @@ Cell[96756, 2470, 177, 3, 41, "Subsection",ExpressionUUID->"774d301f-afd4-41c5-8
 Cell[CellGroupData[{
 Cell[96958, 2477, 832, 24, 155, "Input",ExpressionUUID->"8cd57840-4343-4f51-96fb-8ffd3bf76c61"],
 Cell[97793, 2503, 152, 2, 57, "Output",ExpressionUUID->"5d0c7144-6fac-440e-afff-2f67638d62ee"]
+}, Open  ]]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[98006, 2512, 511, 8, 57, "Section",ExpressionUUID->"d950b03e-df16-4fc2-b942-525f38426415"],
+Cell[CellGroupData[{
+Cell[98542, 2524, 160, 3, 59, "Subsection",ExpressionUUID->"74e25765-5167-42ea-b370-c1908578429c"],
+Cell[98705, 2529, 1013, 17, 115, "Text",ExpressionUUID->"f7f8a4b9-53fa-4ed8-8189-a207cf70751c"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[99755, 2551, 158, 3, 41, "Subsection",ExpressionUUID->"cce8f481-194a-4d2a-8214-b217a3083ac6"],
+Cell[CellGroupData[{
+Cell[99938, 2558, 1348, 31, 133, "Input",ExpressionUUID->"1a0c5dc9-40b2-4748-8e80-d53f8b60fe53"],
+Cell[101289, 2591, 235, 5, 36, "Output",ExpressionUUID->"67913f0d-5a07-4a34-9858-0c7900941036"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[101573, 2602, 177, 3, 41, "Subsection",ExpressionUUID->"9552080a-73ff-4ceb-99ec-f11d5464f86f"],
+Cell[CellGroupData[{
+Cell[101775, 2609, 546, 14, 92, "Input",ExpressionUUID->"d176362e-b503-44ed-9360-7d5e4e0678eb"],
+Cell[102324, 2625, 208, 4, 36, "Output",ExpressionUUID->"c5558367-7bb0-4046-94a7-5b4ae51114ab"]
 }, Open  ]]
 }, Closed]]
 }, Closed]]
